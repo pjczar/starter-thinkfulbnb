@@ -1,4 +1,9 @@
 /* -------  General Styles ------- */
+html,
+body{
+  width:100%;
+  overflow-x:hidden;
+}
 
 body {
   font-family: "Lato", sans-serif;
@@ -41,6 +46,10 @@ main img {
   flex-direction: column;
 }
 
+.group img {
+  width: 100%;
+}
+
 .item {
   flex: 1;
   margin: 10px;
@@ -60,8 +69,17 @@ header {
 
 .logo {
   font-family: "Pangolin", cursive;
+  /* Font size for logo appears to be too large for smaller screens, but was not told to touch it */
   font-size: 72px;
   color: #fff;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-left: 0;
+  padding-bottom: 20px;
 }
 
 header nav ul li {
@@ -83,6 +101,13 @@ header nav ul li a:hover {
 form {
   border: 2px solid #ff385c;
   padding: 10px;
+  max-width: 100%;
+}
+
+form div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 7px;
 }
 
 form label {
@@ -117,3 +142,47 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+@media all and (min-width: 480px) {
+  header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+  header nav ul {
+    padding-top: 14px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  form div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+.grid {
+  display: flex;
+  flex-direction: column;
+}
+
+  .grid-top {
+    display: flex;
+  }
+
+  .grid-bottom {
+    display: flex;
+  }
+
+  
+}
