@@ -142,7 +142,7 @@ footer p {
 }
 
 /* -------  Media Query ------- */
-@media screen and (min-width: 480px) {
+@media all and (min-width: 480px) {
   header {
     display:flex;
     justify-content: space-between;
@@ -158,7 +158,6 @@ footer p {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
   }
 
   form div {
