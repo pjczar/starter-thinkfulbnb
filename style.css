@@ -1,9 +1,4 @@
 /* -------  General Styles ------- */
-html,
-body{
-  width:100%;
-  overflow-x:hidden;
-}
 
 body {
   font-family: "Lato", sans-serif;
@@ -30,8 +25,15 @@ section {
   padding: 20px;
 }
 
+div.group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
 section.alternate-background {
-  background-color: #00a699;
+  background-color: #00a724;
   color: #fff;
 }
 
@@ -39,15 +41,32 @@ main img {
   width: 100px;
 }
 
+section img {
+  width: 100%;
+}
+
 /* ---  Groups & Items --- */
 
-.group {
+form.group {
   display: flex;
   flex-direction: column;
 }
 
-.group img {
+.input {
+  display: flex;
+  justify-content: space-between;
+}
+
+.image-wrapper {
+  flex: 1;
+}
+
+.image-wrapper img {
   width: 100%;
+}
+
+.text-wrapper {
+  flex: 2;
 }
 
 .item {
@@ -74,57 +93,55 @@ header {
   color: #fff;
 }
 
-header nav ul {
+header nav {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  padding-left: 0;
-  padding-bottom: 20px;
 }
 
-header nav ul li {
-  list-style-type: none;
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+header nav ul li a:hover {
+  color: #bdbdbd;
+  tesxt-decoration: none;
 }
 
 header nav ul li a {
   color: #fff;
   text-decoration: none;
-  padding: 0 20px 0 0;
-}
-
-header nav ul li a:hover {
-  color: #bdbdbd;
-  text-decoration: none;
+  padding: 0 10px 0 0;
 }
 
 /* -------  Search Form ------- */
 form {
   border: 2px solid #ff385c;
   padding: 10px;
-  max-width: 100%;
-}
-
-form div {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 7px;
 }
 
 form label {
   font-weight: bold;
+  padding: 30px;
 }
 
 form select,
 form input {
   margin-bottom: 20px;
   width: 180px;
+  max-width: 180px;
 }
 
 form button {
   background-color: #ff385c;
   border: none;
   color: #fff;
-  font-size: 24px;
+  font-size: 18px;
   padding: 15px;
   width: 100%;
 }
@@ -146,43 +163,88 @@ footer p {
   header {
     display:flex;
     justify-content: space-between;
-    align-items: center;
 }
 
-  header nav ul {
-    padding-top: 14px;
-  }
-
-  form {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  form div {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .group {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-
-.grid {
+.logo {
   display: flex;
-  flex-direction: column;
+  font-size: 45px;
+  margin-bottom: 10px;
 }
-
-  .grid-top {
-    display: flex;
-  }
-
-  .grid-bottom {
-    display: flex;
-  }
-
   
+  header nav {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  header nav ul li {
+    display: flex;
+    text-align: center;
+  }
+
+  header nav ul li:last-child a {
+    margin-right: 0;
+  }
+  
+  form.group {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  form label {
+    padding-right: 0;
+  }
+  
+  form select, form input {
+    margin-bottom: 0;
+  }
+
+  div.group {
+    flex-direction: row;
+  }
+
+   .input {
+    width: 20%;
+    font-size: small;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .input:last-child {
+    margin-right: 0;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+
+  .wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .image-container {
+    position: relative;
+  }
+
+  .group-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+   
+  }
+  .item-double {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+
+  .group-2 .item {
+    max-width: 40%;
+    text-align: left;
+  }
 }
